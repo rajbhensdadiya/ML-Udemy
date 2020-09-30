@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('Social_Network_Ads.csv')
+dataset = pd.read_csv('Social_Network_Ads.csv')# loading the dataset 
 X = dataset.iloc[:, [2, 3]].values
 y = dataset.iloc[:, 4].values
 
@@ -22,7 +22,7 @@ X_test = sc.transform(X_test)
 
 # Fitting Decision Tree Classification to the Training set
 from sklearn.tree import DecisionTreeClassifier
-classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
+classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)# random state act as a seed value and entropy is for homogeneous classification or information gain
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
